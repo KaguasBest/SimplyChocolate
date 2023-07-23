@@ -66,7 +66,7 @@
     <!-- Main section -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment of pure delight!
@@ -84,7 +84,7 @@
             </button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Hero section -->
 
       <!-- Benefits section -->
@@ -132,7 +132,9 @@
       <!-- Ingridiernt section -->
       <!-- <section class="ingridients">
         <div class="container ingridients-container">
-          <h2 class="sub-title">IT ALL ADDS UP TO ONE EXCEPTIONAL <span class="accent">TASTE</span> SENSATION</h2>
+          <h2 class="ingridients-sub-title">
+            IT ALL ADDS UP TO ONE EXCEPTIONAL <span class="accent">TASTE</span> SENSATION
+          </h2>
           <p class="ingridient-describe">
             At Simply Chocolate, we believe that the secret to exceptional chocolate is in the details. From the
             sourcing of the finest ingredients to the careful crafting of each individual piece, every step of our
@@ -163,7 +165,7 @@
             </li>
             <li class="ingridient-item list-item overlay-block">
               <img
-                srcset="./images/ingridient/milk.png x1, ./images/ingridient/milk.png 2x"
+                srcset="./images/ingridient/milk.png x1, ./images/ingridient/milk@2x.png 2x"
                 src="./images/ingridient/milk.png"
                 alt="fresh milk"
                 class="img ingridient-img"
@@ -236,16 +238,24 @@
       <!-- End Ingridiernt section -->
 
       <!-- How it's made section -->
-      <!-- <section id="how-its-made" class="how-its-made">
+      <section id="how-its-made" class="how-its-made">
         <div class="container how-its-made-container">
-          <h2 class="sub-title">HOW IT&#8217;S <span class="accent">made?</span></h2>
+          <h2 class="made-title">HOW IT&#8217;S <span class="accent">made?</span></h2>
           <div class="how-its-made-wrap">
-            <img
-              src="./images/made/how-its-made-desktop.jpg"
-              alt="how we made a chockolade"
-              class="img how-its-made-img"
-              width="600"
-              height="400" />
+            <div class="made-pic-wrap">
+              <picture>
+                <source
+                  srcset="./images/made/made-mobile.png, ./images/made/made-mobile@2x.png"
+                  media="(max-width:767px)" />
+                <source
+                  srcset="./images/made/made-tablet.png, ./images/made/made-tablet@2x.png"
+                  media="(max-width:1199px)" />
+                <source
+                  srcset="./images/made/made-desktop.png, ./images/made/made-desktop@2x.png"
+                  media="(min-width:1200px)" />
+                <img class="how-its-made-img" src="./images/made/made-desktop.png" alt="How we made a chockolade" />
+              </picture>
+            </div>
             <div class="how-its-made-block">
               <h3 class="how-its-made-title">Try our chocolates today and discover the perfect balance of flavor</h3>
               <ul class="how-its-made-list list">
@@ -267,7 +277,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- End How it's made section -->
 
       <!-- Our staff -->
