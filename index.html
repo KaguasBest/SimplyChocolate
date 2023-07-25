@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Header section -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <a href="./index.html" class="logo">
           <span class="italic">SIMPLY</span> CHOCOLATE
@@ -59,14 +59,19 @@
             </li>
           </ul>
         </div>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle-icon" width="28" height="28">
+            <use href="./images/svg/icons.svg#menu-icon"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
     <!-- End Header section -->
 
     <!-- Main section -->
     <main>
       <!-- Hero section -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment of pure delight!
@@ -74,7 +79,7 @@
           <div class="control-wrap">
             <button class="btn hero-buy-btn" type="button">Buy now</button>
             <a href="#how-its-made" class="hero-link link">How it&#8217;s made</a>
-            <button class="btn scroll-dwn-btn" type="button">
+            <button id="down" class="btn scroll-dwn-btn" type="button">
               scroll down
               <span class="scroll-dwn-icon">
                 <svg class="scroll-icon" width="24" height="24">
@@ -84,11 +89,11 @@
             </button>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- End Hero section -->
 
       <!-- Benefits section -->
-      <!-- <section class="benefits">
+      <section class="benefits">
         <div class="container benefits-container">
           <ul class="benefits-list list">
             <li class="benefits-item list-item">
@@ -126,11 +131,11 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- End Benefits section -->
 
       <!-- Ingridiernt section -->
-      <!-- <section class="ingridients">
+      <section class="ingridients">
         <div class="container ingridients-container">
           <h2 class="ingridients-sub-title">
             IT ALL ADDS UP TO ONE EXCEPTIONAL <span class="accent">TASTE</span> SENSATION
@@ -234,16 +239,16 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- End Ingridiernt section -->
 
       <!-- How it's made section -->
-      <!-- <section id="how-its-made" class="how-its-made">
+      <section id="how-its-made" class="how-its-made">
         <div class="container how-its-made-container">
           <h2 class="made-title">HOW IT&#8217;S <span class="accent">made?</span></h2>
           <div class="how-its-made-wrap">
             <div class="made-pic-wrap">
-              <picture>
+              <!-- <picture>
                 <source
                   srcset="./images/made/made-mobile.png, ./images/made/made-mobile@2x.png"
                   media="(max-width:767px)" />
@@ -254,7 +259,17 @@
                   srcset="./images/made/made-desktop.png, ./images/made/made-desktop@2x.png"
                   media="(min-width:1200px)" />
                 <img class="how-its-made-img" src="./images/made/made-desktop.png" alt="How we made a chockolade" />
-              </picture>
+              </picture> -->
+              <div
+                class="features-video plyr__video-embed"
+                id="features-player"
+                data-poster="./images/made/made-mobile.png">
+                <iframe
+                  src="https://www.youtube.com/embed/2H0tglcIKsM?autoplay=0&modestbranding=1&controls=0&disablekb=1&playsinline=1&cc_load_policy=1&cc_lang_pref=auto&widget_referrer=https%3A%2F%2Fplyr.io%2F%23youtube&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1&customControls=true&noCookie=false&enablejsapi=1&origin=https%3A%2F%2Fplyr.io&widgetid=1"
+                  allowfullscreen
+                  allowtransparency
+                  allow="autoplay"></iframe>
+              </div>
             </div>
             <div class="how-its-made-block">
               <h3 class="how-its-made-title">Try our chocolates today and discover the perfect balance of flavor</h3>
@@ -277,7 +292,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- End How it's made section -->
 
       <!-- Our staff -->
@@ -334,7 +349,7 @@
     </main>
     <!-- End Main section -->
     <!-- Footer section -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="describe-block">
           <h2 class="footer-title"><span class="accent">Chocolate</span> a delicious cure for a bad day</h2>
@@ -361,6 +376,12 @@
               <li class="nav-footer-item list-item">
                 <a href="#how-its-made" class="nav-footer-link nav-link link" target="_blank">How it&#8217;s made?</a>
               </li>
+              <li class="nav-footer-item list-item hide">
+                <a href="#" class="nav-footer-link nav-link link" target="_blank">Our products</a>
+              </li>
+              <li class="nav-footer-item list-item hide">
+                <a href="#" class="nav-footer-link nav-link link" target="_blank">Top sellers</a>
+              </li>
               <li class="nav-footer-item list-item">
                 <a href="#" class="nav-footer-link nav-link link" target="_blank">Chocolate is loved</a>
               </li>
@@ -372,7 +393,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- End Footer section -->
 
     <!-- Modal section -->
@@ -440,6 +461,61 @@
     </div>
 
     <!-- End Modal section -->
+
+    <!-- Mobile section -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          class="mobile-close"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24">
+          <use href="./images/svg/icons.svg#x-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">How it&#8217;s made?</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Chocolate is loved</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-social">
+        <li class="mobile-social-item">
+          <a class="mobile-social-link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <svg class="mobile-social-icon" width="24" height="24">
+              <use href="./images/svg/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-social-item">
+          <a class="mobile-social-link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <svg class="mobile-social-icon" width="24" height="24">
+              <use href="./images/svg/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- End Mobile section -->
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/mobile.js"></script>
   </body>
 </html>
