@@ -5,15 +5,15 @@ const player = new Plyr('#features-player');
 
 function checkMediaQuery() {
   if (window.innerWidth < 767) {
-    player.poster = '../images/made/made-mobile.png';
+    player.poster = './images/made/made-mobile.png';
   }
 
   if (window.innerWidth > 768) {
-    player.poster = '../images/made/made-tablet.png';
+    player.poster = './images/made/made-tablet.png';
   }
 
   if (window.innerWidth > 1200) {
-    player.poster = '../images/made/made-desktop.png';
+    player.poster = './images/made/made-desktop.png';
   }
 }
 
@@ -30,15 +30,15 @@ var query = '(min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolut
 
 function checkMediaSize() {
   if (matchMedia(query).matches && window.innerWidth < 767) {
-    player.poster = '../images/made/made-mobile@2x.png';
+    player.poster = './images/made/made-mobile@2x.png';
   }
 
   if (matchMedia(query).matches && window.innerWidth > 768) {
-    player.poster = '../images/made/made-tablet@2x.png';
+    player.poster = './images/made/made-tablet@2x.png';
   }
 
   if (matchMedia(query).matches && window.innerWidth > 1200) {
-    player.poster = '../images/made/made-desktop@2x.png';
+    player.poster = './images/made/made-desktop@2x.png';
   }
 }
 

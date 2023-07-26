@@ -781,30 +781,30 @@ p {
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .plyr__poster {
+  .plyr--stopped.plyr__poster-enabled .plyr__poster {
     background-image: var(--dark-gradient), url('../images/made/made-mobile@2x.png');
   }
 }
 @media only screen and (min-width: 768px) {
-  .plyr__poster {
+  .plyr--stopped.plyr__poster-enabled .plyr__poster {
     max-width: 704px;
 
     background-image: var(--dark-gradient), url('../images/made/made-tablet.png');
   }
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .plyr__poster {
+    .plyr--stopped.plyr__poster-enabled .plyr__poster {
       background-image: var(--dark-gradient), url('../images/made/made-tablet@2x.png');
     }
   }
 }
 @media only screen and (min-width: 1200px) {
-  .plyr__poster {
+  .plyr--stopped.plyr__poster-enabled .plyr__poster {
     background-image: var(--dark-gradient), url('../images/made/made-desktop.png');
   }
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .plyr__poster {
+    .plyr--stopped.plyr__poster-enabled .plyr__poster {
       background-image: var(--dark-gradient), url('../images/made/made-desktop@2x.png');
     }
   }
